@@ -1,0 +1,50 @@
+[Version]
+LayoutFile=Layout.inf, Layout1.inf, Layout2.inf
+Signature=$CHICAGO$
+Class=Pro3Camera
+ClassGuid={66C59725-9E39-4824-8A18-3F3E8E09BA25}
+Provider=%EK%
+
+[ClassInstall]
+AddReg=Pro3ClassReg
+CopyFiles=ProCopy
+
+[Pro3ClassReg]
+HKR,,,,%Pro3ClassDescription%
+HKR,,Icon,,-21
+
+
+[DestinationDirs]
+DefaultDestDir=11	;<Windir>\System
+
+[Manufacturer]
+%KodakMfg%=Pro3Camera
+
+[Pro3Camera]
+%1394\E026&3E.DeviceDesc%=Pro3CameraInstall,1394\E026&3E
+ 
+[Pro3CameraInstall]
+AddReg=ProReg
+
+[DefaultInstall]
+CopyFiles=ProCopy
+AddReg=ProReg
+
+[ProCopy]
+Pro31394.sys
+
+[ProReg]
+HKR,,DevLoader,,*ntkern
+HKR,,NTMPDriver,,Pro31394.sys
+
+[SourceDisksNames]
+1="Pro3 DCS Camera IEEE 1394 Install Disk",,%1
+
+[SourceDisksFiles]
+Pro31394.SYS =1
+
+[Strings]
+EK="Kodak"
+Pro3ClassDescription="Kodak Pro3"
+KodakMfg="Kodak"
+1394\E026&3E.DeviceDesc="Kodak Pro3 1394 DCS Camera"

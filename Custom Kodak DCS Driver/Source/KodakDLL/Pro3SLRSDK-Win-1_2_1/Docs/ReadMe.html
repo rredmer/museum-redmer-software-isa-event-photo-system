@@ -1,0 +1,448 @@
+<!-- This template originated from the following file:
+C:\Program Files\CoffeeCup Software\templates\Basic Web Page (White).html
+You may need to copy other HTML files and/or images
+from that directory to the directory that you save this
+file in for it to work properly -->
+
+<html>
+<!--  Created with the CoffeeCup HTML Editor  -->
+<!--         http://www.coffeecup.com         -->
+<head>
+  <title>Pro Back and Pro3SLR SDKs ReadMe</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+</head>
+<body bgcolor="#FFFFFF">
+<!-- Here's the title Header -->
+<center><font face="Arial">
+<h1>
+<b><i>Read Me</i></b><br>
+<b><i>DCS Pro Back SDK Version 1.2.1</i></b><br>
+<b><i>DCS Pro3 SLR SDK Version 1.2.1</i></b><br>
+<b><i>Copyright &copy; 2001 Eastman Kodak Company</i></b>
+</h1>
+</font></center>
+
+<p align="left"><font face="Times">
+<h2><a name="Table">Table of Contents</a></h2>
+<ol>
+<li><a href="#Devices">Supported Devices</a></li>
+<li><a href="#Macintosh">Contents of Macintosh Binhex Files</a></li>
+<li><a href="#Windows">Contents of Windows Zip Files</a></li>
+<li><a href="#Operating">Operating System Support</a></li>
+<li><a href="#Features">New Features</a></li>
+<li><a href="#Fixed">Fixed Issues</a></li>
+<li><a href="#Known">Known Issues</a></li>
+<li><a href="#Functional">Functional Clarifications</a></li>
+<li><a href="#Service">Service and Support</a></li>
+<li><a href="#Contacting">Contacting Eastman Kodak Company</a></li>
+</ol>
+</font></p>
+
+<hr>
+
+<p align="left">
+<font face="Times" color="#0000FF">
+<a name="Devices"><h2>1. Supported Devices</h2></a>
+</font>
+<br>
+<font face="Times">
+The DCS Pro Back SDK supports the device control and image processing for:<br>
+<ul>
+	<li>DCS Pro Back</li>
+	<li>DCS Pro Back Plus</li>
+</ul>
+<br>
+The DCS Pro3SLR SDK supports the device control and image processing for:<br>
+<ul>
+	<li>DCS 760C</li>
+	<li>DCS 760M</li>
+	<li>DCS 720x</li>
+	<li>SCS2000</li>
+</ul>
+<br>
+<br>
+<a href="#Table">back to the top</a>
+</font>
+</p>
+
+<p align="left">
+<font face="Times" color="#0000FF">
+<a name="Macintosh"><h2>2. Contents of Macintosh Binhex Files</h2></a>
+</font>
+<font face="Times">
+<h3>Common to DCS Pro Back and Pro3SLR SDKs</h3>
+<center>
+<table width="90%" bordercolor="#FF0000" cellspacing="2" cellpadding="2" border="2">
+  <tr><!-- Row 1 -->
+    <td>&nbsp;<b>Folder</b></td>
+    <td>&nbsp;<b>File(s)</b></td>
+    <td>&nbsp;<b>Purpose</b></td>
+  </tr>
+  <tr><!-- Row 2 -->
+    <td>&nbsp;doc</td>
+    <td>&nbsp;ReadMe.html</td>
+    <td>&nbsp;This file</td>
+  </tr>
+  <tr><!-- Row 3 -->
+    <td>&nbsp;profiles</td>
+    <td>&nbsp;DCSPortraitLookComp.pf<br>
+	&nbsp;DCSPortraitLookRedComp.pf<br>
+	&nbsp;DCSProductLookComp.pf<br>
+	&nbsp;DCSProductLookRedComp.pf</td>
+    <td>&nbsp;Product and portrait looks profiles. The profiles that have "Red" in the name have a reduced saturation effect. The names that do not have the normal DCS saturated look.</td>
+  </tr>
+   <tr><!-- Row 4 -->
+    <td>&nbsp;profiles</td>
+    <td>&nbsp;DCSRGB.pf<br>
+	&nbsp;Kodak_sRGB.pf<br>
+	&nbsp;Kodak_sRGB_gray.pf<br>
+	&nbsp;ProPhotoRGB.pf</td>
+    <td>&nbsp;Output profiles</td>
+  </tr>
+  <tr><!-- Row 5 -->
+    <td>&nbsp;interface</td>
+    <td>&nbsp;KProDCSDK.h<br>
+	&nbsp;KProDCSDKCameraErrors.h<br>
+	&nbsp;KProDCSDKErrors.h<br>
+	&nbsp;KProDCSDKTypes.h</td>
+    <td>&nbsp;The header files for the SDK defining unique data types, function calls, and error codes</td>
+  </tr>
+  <tr><!-- Row 6 -->
+    <td>&nbsp;loader:inc<br>
+	&nbsp;loader:src</td>
+    <td>&nbsp;KPDCLoader.h<br>
+	&nbsp;KPDCLoaderFuncTypes.h<br>
+	&nbsp;KPDCLoader_Mac.c<br></td>
+    <td>&nbsp;The source code for dynamically loading the SDK. These files should be part of your project.</td>
+  </tr>
+  <tr><!-- Row 7 -->
+    <td>&nbsp;macextensions</td>
+    <td>&nbsp;Kodak DCS Pro Enabler<br>
+	&nbsp;Kodak DCS Pro Expert<br>
+	&nbsp;Kodak DCS Pro Family</td>
+    <td>&nbsp;IEEE 1394 extensions. Must be copied to the system extensions folder for tethered operation.</td>
+  </tr>
+</table>
+</center>	
+<br>
+<br>
+<h3>DCS Pro3SLR SDK</h3>
+<center>
+<table width="90%" bordercolor="#FF0000" cellspacing="2" cellpadding="2" border="2">
+  <tr><!-- Row 1 -->
+    <td>&nbsp;<b>Folder</b></td>
+    <td>&nbsp;<b>File(s)</b></td>
+    <td>&nbsp;<b>Purpose</b></td>
+  <tr><!-- Row 2 -->
+    <td>&nbsp;profiles</td>
+    <td>&nbsp;DCS720XDayComp.pf<br>
+	&nbsp;DCS720XFlashComp.pf<br>
+	&nbsp;DCS720XFluorComp.pf<br>
+	&nbsp;DCS720XTungComp.pf<br>
+	&nbsp;DCS760CDayComp.pf<br>
+	&nbsp;DCS760CFlashComp.pf<br>
+	&nbsp;DCS760CFluorComp.pf<br>
+	&nbsp;DCS760CTungComp.pf</td>
+    <td>&nbsp;DCS 760, DCS 760M, and DCS 720x device link profiles. Each illuminant supported has its own profile.</td>
+  </tr>
+  <tr><!-- Row 3 -->
+    <td>&nbsp;maclib</td>
+    <td>&nbsp;Kodak DCS Pro3 SLR Lib</td>
+    <td>&nbsp;Shared library for DCS 760, DCS 760M, and DCS 720x cameras and images</td>
+  </tr>
+</table>
+</center>
+<br>
+<br>
+<h3>DCS ProBack SDK</h3>
+<center>
+<table width="90%" bordercolor="#FF0000" cellspacing="2" cellpadding="2" border="2">
+  <tr><!-- Row 1 -->
+    <td>&nbsp;<b>Folder</b></td>
+    <td>&nbsp;<b>File(s)</b></td>
+    <td>&nbsp;<b>Purpose</b></td>
+  </tr>
+  <tr><!-- Row 2 -->
+    <td>&nbsp;profiles</td>
+    <td>&nbsp;DCSPBDayComp.pf</td>
+    <td>&nbsp;Daylight device link profile for the DCS Pro Back and Pro Back Plus</td>
+  </tr>
+  <tr><!-- Row 3 -->
+    <td>&nbsp;maclib</td>
+    <td>&nbsp;DCS Pro Back Lib</td>
+    <td>&nbsp;Shared library for DCS Pro Back and Pro Back Plus</td>
+  </tr>
+</table>
+</center>
+<br>
+<a href="#Table">back to the top</a>
+</font>
+</p>
+
+
+<p align="left">
+<font color="#0000FF" face="Times">
+<a name="Windows"><h2>3. Contents of Windows Zip Files</h2></a>
+</font>
+<font face="Times">
+<h3>Common to DCS Pro Back and Pro3SLR SDKs</h3>
+<center>
+<table width="90%" bordercolor="#FF0000" cellspacing="2" cellpadding="2" border="2">
+  <tr><!-- Row 1 -->
+    <td>&nbsp;<b>Folder</b></td>
+    <td>&nbsp;<b>File(s)</b></td>
+    <td>&nbsp;<b>Purpose</b></td>
+  </tr>
+  <tr><!-- Row 2 -->
+    <td>&nbsp;1394Drivers\Windows 98SE<br>
+	&nbsp;1394Drivers\Windows ME<br>
+	&nbsp;1394Drivers\Windows 2000</td>
+    <td>&nbsp;Pro31394.inf<br>
+	&nbsp;Pro31394.sys</td>
+    <td>&nbsp;IEEE 1394 installers and drivers for each operating system</td>
+  </tr>
+  <tr><!-- Row 3 -->
+    <td>&nbsp;1394Drivers\Windows NT4.0</td>
+    <td>&nbsp;InstallNT.bat<br>
+	&nbsp;Wdreg.exe<br>
+	&nbsp;Windrvr.sys</td>
+    <td>&nbsp;DMA memory manager driver, registry updater, and installer batch file for Windows NT 4.0. Needed to optimize data transfers for the OS</td>
+  </tr>
+  <tr><!-- Row 4 -->
+    <td>&nbsp;Dlls</td>
+    <td>&nbsp;ProDriver.dll<br>
+	&nbsp;ProFamily.dll</td>
+    <td>&nbsp;IEEE 1394 dynamic link libraries. Needed for tethered operation.</td>
+  </tr>
+  <tr><!-- Row 5 -->
+    <td>&nbsp;Docs</td>
+    <td>&nbsp;ReadMe.html
+	&nbsp;IEEE1394ReadMe.html</td>
+    <td>&nbsp;This file and a ReadMe covering IEEE 1394 issues</td>
+  </tr>
+  <tr><!-- Row 6 -->
+    <td>&nbsp;ICCProfiles</td>
+    <td>&nbsp;DCSPortraitLookComp.pf<br>
+	&nbsp;DCSPortraitLookRedComp.pf<br>
+	&nbsp;DCSProductLookComp.pf<br>
+	&nbsp;DCSProductLookRedComp.pf</td>
+    <td>&nbsp;Product and portrait looks profiles. The profiles that have "Red" in the name have a reduced saturation effect. The names that do not have the normal DCS saturated look.</td>
+  </tr>
+  <tr><!-- Row 7 -->
+    <td>&nbsp;ICCProfiles</td>
+    <td>&nbsp;DCSRGB.pf<br>
+	&nbsp;Kodak_sRGB.pf<br>
+	&nbsp;Kodak_sRGB_gray.pf<br>
+	&nbsp;ProPhotoRGB.pf</td>
+    <td>&nbsp;Output profiles</td>
+  </tr>
+  <tr><!-- Row 8 -->
+    <td>&nbsp;Interface</td>
+    <td>&nbsp;KProDCSDK.h<br>
+	&nbsp;KProDCSDKCameraErrors.h<br>
+	&nbsp;KProDCSDKErrors.h<br>
+	&nbsp;KProDCSDKTypes.h</td>
+    <td>&nbsp;The header files for the SDK defining unique data types, function calls, and error codes</td>
+  </tr> 
+  <tr><!-- Row 10 -->
+    <td>&nbsp;Loader\Inc<br>
+	&nbsp;Loader\Src</td>
+    <td>&nbsp;KPDCLoader.h<br>
+	&nbsp;KPDCLoaderFuncTypes.h<br>
+	&nbsp;KPDCLoader_Win.c<br>
+	&nbsp;KPDCLoader_Test.c</td>
+    <td>&nbsp;The source code for dynamically loading the SDK. Also includes the source to test this dynamic loading. These files should be part of your project.</td>
+  </tr>
+</table>
+</center>
+<br>
+<br>
+<h3>DCS Pro3SLR SDK</h3>
+<center>
+<table width="90%" bordercolor="#FF0000" cellspacing="2" cellpadding="2" border="2">
+  <tr><!-- Row 1 -->
+    <td>&nbsp;<b>Folder</b></td>
+    <td>&nbsp;<b>File(s)</b></td>
+    <td>&nbsp;<b>Purpose</b></td>
+  </tr>
+  <tr><!-- Row 2 -->
+    <td>&nbsp;Dlls</td>
+    <td>&nbsp;DCSPro3SLR.dll</td>
+    <td>&nbsp;Dynamic link library for DCS 760, DCS 760M, and DCS 720x cameras and images</td>
+  </tr>
+  <tr><!-- Row 3 -->
+    <td>&nbsp;ICCProfiles</td>
+    <td>&nbsp;DCS720XDayComp.pf<br>
+	&nbsp;DCS720XFlashComp.pf<br>
+	&nbsp;DCS720XFluorComp.pf<br>
+	&nbsp;DCS720XTungComp.pf<br>
+	&nbsp;DCS760DayComp.pf<br>
+	&nbsp;DCS760FlashComp.pf<br>
+	&nbsp;DCS760FluorComp.pf<br>
+	&nbsp;DCS760TungComp.pf	</td>
+    <td>&nbsp;DCS 760, DCS 760M, and DCS 720x device link profiles. Each illuminant supported has its own profile.</td>
+  </tr>
+</table>
+</center>
+<br>
+<br>
+<h3>DCS ProBack SDK</h3>
+<center>
+<table width="90%" bordercolor="#FF0000" cellspacing="2" cellpadding="2" border="2">
+  <tr><!-- Row 1 -->
+    <td>&nbsp;<b>Folder</b></td>
+    <td>&nbsp;<b>File(s)</b></td>
+    <td>&nbsp;<b>Purpose</b></td>
+  </tr>
+  <tr><!-- Row 2 -->
+    <td>&nbsp;Dlls</td>
+    <td>&nbsp;DCSProBack.dll</td>
+    <td>&nbsp;Dynamic link library for DCS Pro Back and DCS Pro Back Plus</td>
+  </tr> 
+  <tr><!-- Row 3 -->
+    <td>&nbsp;ICCProfiles</td>
+    <td>&nbsp;DCSPBDayComp.pf</td>
+    <td>&nbsp;Daylight input profile for the DCS Pro Back and Pro Back Plus</td>
+  </tr>
+</table>
+</center>
+<br>
+<a href="#Table">back to the top</a>
+</font>
+</p>
+
+
+<p align="left">
+<font face="Times" color="#0000FF">
+<a name="Operating"><h2>4. Operating System Support</h2></a>
+</font>
+<font face="Times">
+The DCS ProBack and DCS Pro3SLR SDKs have been built and tested on:
+<ul>
+<li>Mac OS 9.0 through 9.2</li>
+<li>Windows 2000</li>
+<li>Windows XP Professional</li>
+</ul>
+<a href="#Table">back to the top</a>
+</font>
+</p>
+
+
+<p align="left">
+<font face="Times" color="#0000FF">
+<a name="Features"><h2>5. New Features (Since version 1.1.3)</h2></a>
+</font>
+<font face="Times">
+<ul>
+<li>Camera control and image processing capability for DCS 760M</li>
+<li>New API function KPDCGetImageRectangleWithTest().
+	This function has more robust parameter error checking than the original KPDCGetImageRectangle().
+	Though KPDCGetImageRectangle() is still supported, it is recommended for developers to begin to use this new implementation.
+</li>
+</ul>
+<a href="#Table">back to the top</a>
+</font>
+</p>
+
+
+<p align="left">
+<font face="Times" color="#0000FF">
+<a name="Fixed"><h2>6. Fixed Issues (Since version 1.1.3)</h2></a>
+</font>
+<font face="Times">
+<ol>
+<li>Fixed misaligned pixels at right edge of image.</li>
+<li>Optimized performance of image rotation when acquired in strips.</li>
+</ol>
+<a href="#Table">back to the top</a>
+</font>
+</p>
+
+
+<p align="left">
+<font face="Times" color="#0000FF">
+<a name="Known"><h2>7. Known Issues</h2></a>
+</font>
+<font face="Times">
+<ol>
+	<li>On Windows 98SE and ME communications with the camera or back may be lost if two cards are inserted The scenario where this happens the most is as follows:
+	<ul>
+		<li><i>Insert two PCMCIA cards in the camera or back</i></li>
+		<li><i>Format each card using the menu options of the camera or back</i></li>
+		<li><i>Shoot a couple images to card 0</i></li>
+		<li><i>Shoot a couple of images to card 1</i></li>
+		<li><i>Events for the card 0 shoot will be handled correctly but the events for shooting to card 1 get lost causing the SDK to become unresponsive. There is no work around at this time.</i></li>
+	</ul>
+	<li>Some Windows 98SE and ME systems fail to find a camera or back. The device does appear in the Device Manager but communications through the SDK to the camera fail. Windows 2000 and XP Professional are the recommended operating systems for tethered operation.</li>
+</ol>
+<a href="#Table">back to the top</a>
+</font>
+</p>
+
+
+<p align="left">
+<font face="Times" color="#0000FF">
+<a name="Functional"><h2>8. Functional Clarifications</h2></a>
+</font>
+<font face="Times">
+<ol>
+<li>For maximum performance in tethered mode operation you should use the AC Adapter as the power source</li>
+<li>For tethered support on Macintosh systems you need to drag the files in the MacExtensions folder to your system extensions folder. The drivers included with this version are different than what are included with the DCS SDK.</li>
+<li>For tethered support on Windows system plug in your camera and when the "New Device Found" dialog opens follow the instructions on loading the appropriate driver. Point to the driver for the operating system you are using. The drivers included with this version are different than what are included with the DCS SDK.</li>
+</ol>
+<a href="#Table">back to the top</a>
+</font>
+</p>
+
+
+<p align="left">
+<font face="Times" color="#0000FF">
+<a name="Service"><h2>10. Service and Support</h2></a>
+</font>
+<font face="Times">
+If you suspect a bug in the SDK you downloaded, please first check Kodak's web page to ensure that you have the latest version and the camera or back has the latest version of firmware.
+To report a problem, request a feature, or request clarification of a function, please complete the issue report form found in the Developer Relations area of the Kodak DRG Web site.
+The URL is <a href="http://www.kodak.com/go/drg" target="top">http://www.kodak.com/go/drg</a>.
+<br>
+<br>
+After submitting the report you will receive a response indicating that we have received your report. At the same time your report will be fed into our internal support database that will begin our process of handling the report. The priority assigned to your report will depend on the severity of the problem. Fatal issues will receive the highest priority. Please indicate platform and host configuration such as memory, processor, speed, and your hardware settings, including SCSI and IEEE 1394 adapters, when reporting an issue.
+All issues will be reviewed by our Change Control Board to determine the length of time it will take to implement and test a code change to repair the bug. You will be notified of the expected delivery date and version number of the library that will have the bug repaired. If the Change Control Board does not fully understand the issue report you will be contacted for more information.
+<br>
+<br>
+Requests for added features will receive the same treatment but with a lower priority than reported bugs.
+<br>
+<br>
+A question about a particular function of the SDK will not initiate a review by our Change Control Board but you will receive an answer from our development community.
+<br>
+<br>
+<a href="#Table">back to the top</a>
+</font></p>
+
+
+<p align="left">
+<font face="Times" color="#0000FF">
+<a name="Contacting"><h2>11. Contacting Eastman Kodak Company</h2></a>
+</font>
+<font face="Times">
+For technical assistance in the United States call:
+<br>
+1-800-CD-KODAK (1-800-23-56325)
+<br>
+<br>
+For technical assistance in Canada call:
+<br>
+1-800-GO-KODAK (1-800-46-56325)
+<br>
+<br>
+Visit our web site at: <a href="http://www.kodak.com/go/dcs" target="top">http://www.kodak.com/go/dcs</a> or <a href="http://www.kodak.com/go/drg" target="top">KODAK Developer Relations</a>
+<br>
+<br>
+<a href="#Table">back to the top</a>
+</font></p>
+
+
+<hr>
+</body>
+</html>
+

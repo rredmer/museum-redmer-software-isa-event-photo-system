@@ -1,0 +1,77 @@
+; Pro31394.INF -- Pro 3 DCS Camera and Back Device INF for Win98/ME/2000 
+
+[Version]
+signature="$CHICAGO$"
+Class=Pro3Camera
+ClassGuid={66C59725-9E39-4824-8A18-3F3E8E09BA25}
+Provider=%EK%
+;LayoutFile=LAYOUT.INF
+DriverVer=3/28/2001,1.0
+
+[SourceDisksNames]
+1394 = "Pro3 DCS Camera IEEE 1394 Install Disk","",,.\
+
+[SourceDisksFiles]
+Pro31394.SYS = 1394
+
+[DestinationDirs]
+defaultdestdir=11
+Pro3Camera.CopyFiles=10,system32\drivers
+
+; =================== Class Sections ===========================
+[ClassInstall32]
+Addreg=Pro3CameraClassReg
+
+[ClassInstall]
+Addreg=Pro3CameraClassReg
+
+[Pro3CameraClassReg]
+HKR,,,,%Pro3CameraClassName%
+HKR,,Icon,,-21
+
+; =================== Table of content =========================
+
+[Manufacturer]
+%KodakMfg%=Kodak
+
+; =================== Kodak ========================
+
+[Kodak]
+%1394\E026&3E.DeviceDesc%=Pro3Camera,1394\E026&3E
+
+[Pro3Camera]
+AddReg=Pro3Camera.AddReg
+CopyFiles=Pro3Camera.CopyFiles
+
+[Pro3Camera.AddReg]
+HKR,,DevLoader,,*ntkern
+HKR,,NTMPDriver,,Pro31394.sys
+
+[Pro3Camera.NT]
+AddReg=Pro3Camera.AddReg
+CopyFiles=Pro3Camera.CopyFiles
+
+[Pro3Camera.NT.Services]
+AddService = Pro3Camera,2,Pro3Camera_ServiceInstallSection
+
+[Pro3Camera_ServiceInstallSection]
+DisplayName=%1394\E026&3E.DeviceDesc%
+ServiceType=1
+StartType=3
+ErrorControl=1
+ServiceBinary=%12%\Pro31394.sys
+
+[Pro3Camera.CopyFiles]
+Pro31394.sys
+
+[Strings]
+EK="Kodak"
+Pro3CameraClassName="Kodak Pro3 1394 DCS Camera"
+
+KodakMfg="Kodak"
+1394\E026&3E.DeviceDesc="Kodak Pro3 1394 DCS Camera"
+
+[DefaultInstall]
+CopyFiles=Pro3Camera.CopyFiles
+
+[DefaultInstall.AddReg]

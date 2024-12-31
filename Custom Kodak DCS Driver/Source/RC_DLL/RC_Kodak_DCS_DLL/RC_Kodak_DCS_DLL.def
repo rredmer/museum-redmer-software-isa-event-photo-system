@@ -1,0 +1,6 @@
+; RC_Kodak_DCS_DLL.def : Declares the module parameters for the DLL.
+
+LIBRARY      "RC_Kodak_DCS_DLL"
+
+EXPORTS
+    ; Explicit exports can go here

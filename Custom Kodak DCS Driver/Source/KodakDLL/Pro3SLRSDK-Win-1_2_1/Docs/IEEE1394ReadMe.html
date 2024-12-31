@@ -1,0 +1,278 @@
+<!--
+This is the Kodak Professional IEEE 1394 ReadMe for DCS Camera Mamager.
+Author: 	Mike Coogan
+Started:	November 7, 2001
+Version:	1.0
+Revision:	1
+-->
+
+<html>
+<head>
+
+<title>Kodak Professional IEEE 1394 ReadMe</title>
+</head>
+
+<style>
+	.banner
+	{
+		font-size: medium;
+		font-style: normal;
+		font-variant: normal;
+		font-weight: bold;
+	}
+	.kodak
+	{
+		font-size: large;
+		font-style: bold;
+		font-variant: normal;
+		font-weight: bold;
+		color: red;
+	}
+	.professional
+	{
+		font-size: large;
+		font-style: bold;
+		font-variant: normal;
+		font-weight: bold;
+		color: gray;
+	}
+
+	.ieee1394
+	{
+		font-size: medium;
+		font-style: normal;
+		font-variant: normal;
+		font-weight: normal;
+		color: yellow;
+	}
+
+	.date
+	{
+		font-size: medium;
+		font-style: normal;
+		font-variant: normal;
+		font_weight: normal;
+		color: white;
+	}
+	
+	.standard
+	{
+		font-size: small;
+		font-style: normal;
+		font-variant: normal;
+		font_weight: normal;
+		color: white;	
+	}
+	
+	.contents
+	{
+		font-size: medium;
+		font-style: normal;
+		font-variant: normal;
+		font_weight: normal;
+		color: white;	
+	}
+	
+</style>
+
+<body>
+<table summary="This is the table for the Kodak Professional Banner" border="0" width="100%" cellspacing="0" cellpadding="4">
+	<tr><td bgcolor="#000000"><table border="0" width="100%" cellspacing="0" cellpadding="4">
+		<tr><td class="kodak" align="right">Kodak</td><td class="professional" align="left"> Professional</td>
+			<td class="ieee1394" align="center">IEEE 1394 ReadMe</td>
+			<td class="date" align="right">Updated December 11, 2001</td></tr>
+	</table></td></tr>
+</table>
+
+<p>
+<h3><a name=toc>Contents of this file</a></h3>
+</p>
+<ul>
+<a href="#operating">Operating System Support</a><br>
+<a href="#adapters">Hardware</a><br>
+<a href="#software">Software</a><br>
+<a href="#installation">Installation</a><br>
+<a href="#limitations">Limitations</a><br>
+</ul>
+</p>
+
+<hr width="100%" size="2">
+
+<p>
+<h3><a name=operating>Operating System Support</a></h3>
+ The IEEE 1394 support libraries included with the application 
+software you have installed have been certified on Windows 2000
+and Windows XP Professional. We have not done anything purposefully 
+to break Windows 98SE, Windows ME, or Windows NT 4.0 but no testing 
+effort was applied to those operating systems. Windows 95 is not 
+supported and there is no intent to support Windows 95 in a future 
+release.
+</p>
+
+<p>
+<a href="#toc">Back to the Top</a>
+</p>
+
+<p>
+<h3><a name=adapters>Hardware and Software</a></h3>
+The following list defines which OHCI IEEE 1394 adapters have been certified 
+with Windows operating systems. The list includes vendor name/model name.<br>
+
+<table width="100%" cellspacing="0" cellpadding="4" border="0"><br>
+<tr>
+    <td align="left">Windows 98SE (Certified with a previous release)</td>
+    <td align="left">Orange Micro/Orange Link</td>
+    <td align="left"></td>
+</tr>
+<tr>
+    <td align="left">Windows ME (Certified with a previous release)</td>
+    <td align="left">Orange Micro/Orange Link</td></td>
+    <td align="left">Keyspan/FPC1-3</td>
+	<td align="left">Adaptec/AFW-4300</td>
+</tr>
+<tr>
+    <td align="left">Windows NT 4.0 (Certified with a previous release)</td>
+    <td align="left">Adaptec/8920</td>
+    <td align="left">Adaptec/8940</td>
+</tr>
+<tr>
+    <td align="left">Windows 2000</td>
+    <td align="left">Orange Micro/Orange Link</td>
+    <td align="left">Adaptec/AFW-4300</td>
+	<td align="left">Keyspan/FPC1-3</td>
+</tr>
+<tr>
+    <td>Windows XP Professional</td>
+    <td align="left">Orange Micro/Orange Link</td>
+    <td align="left">Keyspan/FPC1-3</td>
+	<td align="left">Adaptec/AFW-4300</td>
+</tr>
+</table>
+<br>
+
+The following list defines which CardBus IEEE 1394 adapters have been certified 
+with Windows operating systems. The list includes vendor name/model name. NA for 
+the model name indicates "not applicable" No solution are available for Windows 
+NT 4.0<br>
+<table width="100%" cellspacing="0" cellpadding="4" border="0"><br>
+<tr>
+    <td align="left">Windows 98SE (Certified with a previous release)</td>
+    <td align="left">VST/NA</td>
+    <td align="left">Orange Micro/NA</td>
+</tr>
+<tr>
+    <td align="left">Windows ME (Certified with a previous release)</td>
+    <td align="left">VST/NA</td>
+	<td align="left">Orange Micro/NA</td>
+</tr>
+<tr>
+    <td align="left">Windows 2000</td>
+    <td align="left">VST/NA</td>
+    <td align="left">Orange Micro/NA</td>
+	<td align="left">Keyspan/FCB-1</td>
+</tr>
+<tr>
+    <td>Windows XP Professional</td>
+    <td align="left">VST/NA</td>
+    <td align="left">Orange Micro/NA</td>
+	<td align="left">Keyspan/FCB-1</td>
+</tr>
+</table>
+<br>
+Other IEEE 1394 OHCI and PCMCIA CardBus adapters may provide adequate performance but 
+our testing to date has been limited to the above mentioned adapters. If you choose to 
+use an adapter other than the ones listed that you limit your selection to those that use 
+the Texas Instruments IEEE 1394 chipset. Connectivity issues have been identified with 
+adapters that use the NEC IEEE 1394 chipset.
+<br>
+<br>
+<a href="#toc">Back to the Top</a>
+</p>
+
+<p>
+<h3><a name=software>Software</a></h3>
+Windows 98SE, ME, 2000, and XP operating systems come with drivers for IEEE 1394. An issue 
+was found that significantly affected our performance with these supplied drivers on Windows 
+98SE and 2000. The issue was reported to Microsoft and they have since made the necessary 
+changes to improve our performance. It is necessary that you upgrade the drivers on your system 
+to the versions Microsoft has made available. Click on the appropriate link below to obtain your 
+upgrade.
+<br><br>
+<a href="http://support.microsoft.com/support/kb/articles/Q252/1/83.ASP">For Windows 98SE</a>
+<br><br>
+<a href="http://support.microsoft.com/support/kb/articles/q262/8/14.ASP">For Windows 2000</a>
+<br>
+<br>
+Notes: 
+<br>
+There may be a fee with associated with the Windows 2000 upgrade<br>
+This upgrade is not required for Windows 2000 Service Pack 2<br>
+This upgrade is not required for Windows ME<br>
+This upgrade is not required for Windows XP<br>
+Follow the instructions documented on the sites for updating the drivers<br>
+<br>
+Windows NT 4.0 does not come with a driver for the Adaptec 8920 or 8940 IEEE 1394 adapters. 
+The adapters themselves come with a driver called Hot Connect. It is required that you install 
+Hot Connect version 2.0 or newer. If your adapter did not come with version 2.0 or newer you can 
+download it from Adaptec. Click on the link below to get to the Adaptec website and search for 
+Hot Connect.<br>
+<br>
+<a href="http://www.adaptec.com">Go to Adaptec</a>
+<br><br>
+<a href="#toc">Back to the Top</a>
+</p>
+
+<p>
+<h3><a name=installation>Installation</a></h3>
+When you first plug in your new DCS 760, 760M, 720x cameras, Pro Back, or Pro Back Plus, the 
+operating system will display the "New Hardware Found" dialog. To install the driver software 
+for your new camera or back have the software CDROM you received with it in your CDROM drive 
+and click on the appropriate link below to get instructions for installing a device driver. The 
+folder where the drivers are located on the CDROM is "WDMDrivers\ProDriver". There is a folder 
+for each operating system.<br>
+<br>
+<a href="http://support.microsoft.com/support/kb/articles/q200/8/42.asp">For Windows 98SE and ME</a><br>
+<br>
+<a href="http://www.microsoft.com/windows2000/en/professional/help/"> For Windows 2000 and XP</a><br>
+Scroll down the Window on the left side of the page and find "Control Panel". Under that is an 
+icon named "Add Remove Hardware". Left click the + sign to expand the menu choices. Double click 
+the "Installing Devices" option under the "Install or Uninstall Device" option. Once this page 
+opens, select the option at the bottom titled "Install a device".<br>
+<br>
+If you have a legacy camera (DCS 315, 330, 520, 560, 620, 620x, 660, or 660M) and plan on 
+simultaneously tethering it to your PC with your new camera or back, it is required that you 
+upgrade the driver you received previously. To complete the upgrade, have the software CDROM 
+you received with your new camera or back in your CDROM drive. Have the legacy camera you wish 
+to upgrade the driver for attached. Click on the appropriate link below to get the instructions 
+for updating a driver. The folder where the updated drivers are located on the CDROM is 
+WDMDrivers\DCSDriver. There is a folder for each of the operating systems.<br>
+<br> 
+<a href="http://support.microsoft.com/support/kb/articles/q200/8/42.asp">For Windows 98SE and ME</a><br>
+<br>
+<a href="http://www.microsoft.com/windows2000/en/professional/help/"> For Windows 2000 and XP Professional</a><br>
+Scroll down the Window on the left side of the page and find "Control Panel". Under that is an 
+icon named "Add Remove Hardware". Left click the + sign to expand the menu choices. Double click 
+the "Installing Devices" option under the "Install or Uninstall Device" option. Once this page opens, 
+select the option at the bottom titled "Plug and Play device driver support". At the bottom of that 
+page select "Update or change a device driver".<br>
+<br>
+<a href="#toc">Back to the Top</a>
+</p>
+
+<p>
+<h3><a name=limitations>Limitations</a></h3>
+These new versions of the IEEE 1394 drivers do not support "Hot Pluggability". What does this mean? 
+When the application is active, connecting new cameras or disconnecting currently attached cameras 
+is not supported. It is highly recommended that you not attempt this, as it will potentially hang 
+the system forcing a reboot. If you need to connect other cameras, or disconnect any that you have
+connected, you should exit the application first. After you have completed your connection/disconnection 
+action then you can reactivate the application. This will be corrected in a future release.<br>
+<br>
+At this time Direct Memory Access (DMA) is not supported on Windows 98SE, ME, 2000, and XP.  This means 
+that the transfer time of images from the camera's or back's memory or PCMCIA card to a location on your 
+hard drive is not optimized. This will be corrected in a future release. Typical speeds we are seeing 
+is 3.5 to 4.0 MB/sec on a 500MHz Pentium II machine with 128MB of memory.<br>
+<br>
+<a href="#toc">Back to the Top</a>
+</body>
+</html>

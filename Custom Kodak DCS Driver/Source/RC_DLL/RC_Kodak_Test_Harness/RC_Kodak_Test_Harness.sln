@@ -1,0 +1,21 @@
+Microsoft Visual Studio Solution File, Format Version 7.00
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "RC_Kodak_Test_Harness", "RC_Kodak_Test_Harness.vcproj", "{FF579651-4D9B-4ED0-9F98-96F7917DFCD3}"
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		ConfigName.0 = Debug
+		ConfigName.1 = Release
+	EndGlobalSection
+	GlobalSection(ProjectDependencies) = postSolution
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{FF579651-4D9B-4ED0-9F98-96F7917DFCD3}.Debug.ActiveCfg = Debug|Win32
+		{FF579651-4D9B-4ED0-9F98-96F7917DFCD3}.Debug.Build.0 = Debug|Win32
+		{FF579651-4D9B-4ED0-9F98-96F7917DFCD3}.Release.ActiveCfg = Release|Win32
+		{FF579651-4D9B-4ED0-9F98-96F7917DFCD3}.Release.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal
